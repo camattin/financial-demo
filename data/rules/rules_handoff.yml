@@ -1,5 +1,3 @@
-version: "3.0"
-
 rules:
 
 - rule: Handoff intent from other bot's handoff triggers greeting

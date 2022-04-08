@@ -1,5 +1,3 @@
-version: "3.0"
-
 stories:
 
 - story: transfer money + switch to search transactions or pay credit card, deny
