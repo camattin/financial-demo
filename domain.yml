@@ -97,6 +97,7 @@ slots:
       type: from_entity
       conditions:
       - active_loop: transfer_money_form
+        requested_slot: PERSON
     - intent:
       - inform
       - transfer_money_form
@@ -123,7 +124,9 @@ slots:
       type: from_entity
       conditions:
       - active_loop: cc_payment_form
+        requested_slot: amount-of-money
       - active_loop: transfer_money_form
+        requested_slot: amount-of-money
     - entity: number
       not_intent:
       - check_balance
@@ -131,7 +134,9 @@ slots:
       type: from_entity
       conditions:
       - active_loop: cc_payment_form
+        requested_slot: amount-of-money
       - active_loop: transfer_money_form
+        requested_slot: amount-of-money
     - intent:
       - inform
       - cc_payment_form
@@ -162,6 +167,7 @@ slots:
       type: from_entity
       conditions:
       - active_loop: cc_payment_form
+        requested_slot: credit_card
     - intent:
       - inform
       - cc_payment_form
@@ -237,13 +243,9 @@ slots:
     - intent: search_transactions
       type: from_trigger_intent
       value: spend
-      conditions:
-      - active_loop: transaction_search_form
     - intent: check_earnings
       type: from_trigger_intent
       value: deposit
-      conditions:
-      - active_loop: transaction_search_form
     - type: from_entity
       entity: search_type
       conditions:
@@ -268,7 +270,9 @@ slots:
       type: from_entity
       conditions:
       - active_loop: cc_payment_form
+        requested_slot: time
       - active_loop: transaction_search_form
+        requested_slot: time
     - intent:
       - inform
       - cc_payment_form

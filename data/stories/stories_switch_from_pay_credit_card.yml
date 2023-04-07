@@ -1,4 +1,4 @@
-version: '3.1'
+version: "3.1"
 stories:
 
 - story: pay credit card + switch to search transactions or transfer money, deny
